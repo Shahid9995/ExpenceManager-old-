@@ -1,0 +1,39 @@
+class Images {
+  static const String logo = 'assets/image/splash_icon.png';
+  static const String svg_logo = 'assets/svg/svg_logo.svg';
+  static const String verification_img = 'assets/svg/verification_img.svg';
+  static const String logo_coin = 'assets/image/logo-coin.png';
+  static const String coin_gif = 'assets/gif/coin_gif.gif';
+  static const String scane_recipt = 'assets/svg/scane_recipt.svg';
+  static const String icon_background = 'assets/svg/icon-background.svg';
+  static const String alert = 'assets/svg/alert.svg';
+  static const String alert_svg = 'assets/svg/alert_svg.svg';
+  static const String add_card = 'assets/svg/add_card.svg';
+  static const String price_look = 'assets/svg/price_look.svg';
+  static const String transaction = 'assets/svg/transaction.svg';
+  static const String reports = 'assets/svg/reports.svg';
+  static const String user = 'assets/svg/user.svg';
+  // static const String mail_icon = 'assets/svg/mail_svg.svg';
+  static const String mail_icon = 'assets/image/mail-icon.png';
+  static const String lock_icon = 'assets/image/lock-icon.png';
+  static const String mobile_icon = 'assets/image/mobile-icon.png';
+  static const String search_icon = 'assets/image/search-icon.png';
+  static const String user_icon = 'assets/image/user-icon.png';
+  static const String verifiLoock_icon = 'assets/image/veriLock-icon.png';
+  static const String dashboard_user = 'assets/image/dashboard-user.png';
+  static const String card_user = 'assets/image/card-user.png';
+  static const String credit_card = 'assets/image/credit-card.png';
+  static const String calander = 'assets/image/calander-icon.png';
+  static const String card_lock = 'assets/image/card-lock.png';
+  static const String authmobile_icon = 'assets/image/authmobile-icon.png';
+  static const String card_img = 'assets/image/card-img.png';
+  static const String menu_icon = 'assets/image/menu-icon.png';
+  static const String logo_home = 'assets/image/logo-home.png';
+  static const String home_coin = 'assets/image/home-coin.png';
+
+  static const String auth_drawer = 'assets/svg/auth_drawer.svg';
+  static const String logo_name = 'assets/image/logo_name.png';
+  static const String arabic = 'assets/image/arabic.png';
+  static const String english = 'assets/image/english.png';
+  static const String animate_delivery_man = 'assets/image/delivery-man.gif';
+}
