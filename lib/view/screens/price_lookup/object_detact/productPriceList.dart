@@ -44,10 +44,10 @@ class _PriceListState extends State<PriceList> {
               child:true?GridView(
                 gridDelegate:
                 const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisSpacing: 10,
+                    crossAxisSpacing: 0,
                     crossAxisCount: 2,
-                    mainAxisSpacing: 20,
-                    childAspectRatio: 1),
+                    mainAxisSpacing: 10,
+                    childAspectRatio: .9),
                 children: List.generate(MyRepo.googleDataModel.value.data!.length, (index) {
                     return InkWell(
                       onTap: () {
@@ -55,23 +55,10 @@ class _PriceListState extends State<PriceList> {
                       },
                       child: Container(
                         // padding: EdgeInsets.symmetric(),
-                          margin: EdgeInsets.symmetric(
-                              horizontal: AppSizes.appHorizontalSm),
+                        //   margin: EdgeInsets.symmetric(horizontal: AppSizes.appHorizontalSm),
                           decoration: BoxDecoration(
                             color: AppColors.kWhite,
-                            // boxShadow: const [
-                            //   BoxShadow(
-                            //     color: Colors.grey,
-                            //     blurRadius:
-                            //     1.0, // soften the shadow
-                            //     spreadRadius:
-                            //     0, //extend the shadow
-                            //     offset: Offset(
-                            //       0, // Move to right 5  horizontally
-                            //       1.0, // Move to bottom 5 Vertically
-                            //     ),
-                            //   )
-                            // ],
+
                             borderRadius: BorderRadius.circular(15),
                             // border: Border.all(color: AppColors.kBlack.withOpacity(0.5))
                           ),
@@ -79,95 +66,53 @@ class _PriceListState extends State<PriceList> {
                           // width: 170,
                           child: Center(
                               child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                // mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Column(
-                                    // crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        padding: EdgeInsets.symmetric(
-                                          vertical: AppSizes.appHorizontalSm * 0.6,
-                                        ),
-                                        child:   (MyRepo.googleDataModel.value.data![index].pagemap!.cseImage!=null)? CachedNetworkImage(
-                                          // imageUrl: "",
-                                          imageUrl: "${MyRepo.googleDataModel.value.data![index].pagemap!.cseImage!.first.src}",
-                                          // imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGKxks616GarxvpvK6dy5BjeMmfrqxEXJx4t69Mg3Kra5XVn7dgN5cg04N",
-                                          // imageBuilder: (context, imageProvider) => Container(
-                                          //   width: double.infinity,
-                                          //   // height: 10,
-                                          //   decoration: BoxDecoration(
-                                          //     // borderRadius: BorderRadius.circular(10),
-                                          //     image: DecorationImage(
-                                          //         image: imageProvider,
-                                          //         fit: BoxFit.fill
-                                          //     ),
-                                          //   ),
-                                          // ),
-                                          placeholder: (context,index)=>Container(
-                                              alignment: Alignment.center,
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(15),
+                                        border: Border.all(color: AppColors.kBlack.withOpacity(0.5))),
+                                    padding: EdgeInsets.symmetric(vertical: AppSizes.appHorizontalSm * 0.6,
+                                    ),
+                                    child:   (MyRepo.googleDataModel.value.data![index].pagemap!.cseImage!=null)?
+                                    CachedNetworkImage(
+                                      // imageUrl: "",
+                                      imageUrl: "${MyRepo.googleDataModel.value.data![index].pagemap!.cseImage!.first.src}",
+                                      imageBuilder: (context, imageProvider) =>
+                                          Container(width: 150,
+                                            height: 90,
+                                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
+                                              image: DecorationImage(image: imageProvider,
+                                                  fit: BoxFit.cover),
+                                            ),
+                                          ),
+                                      placeholder: (context,index) =>
+                                          Container(alignment: Alignment.center,
                                               child: const CircularProgressIndicator()),
-                                          errorWidget: (context, url, error) => const Icon(Icons.error),
-                                        ):Container(),
-                                      ),
-                                      SizedBox(height: AppSizes.appHorizontalSm * .5,),
-                                      Padding(padding: EdgeInsets.symmetric(
-                                            horizontal: AppSizes.appHorizontalSm * 1),
-                                        child: Row(children: [
-                                            Image.asset(Images.card_user,
-                                              height: 15,
-                                              width: 15,
-                                            ),
-                                            SizedBox(
-                                              width: AppSizes.appHorizontalSm * .5,
-                                            ),
-                                            Text(
-                                              "${MyRepo.userDataModel.value.data!.cards![index - 1].nameOnCard}",
-                                              style: poppinsRegular.copyWith(fontSize: 11),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height:
-                                        AppSizes.appHorizontalSm *
-                                            .2,
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                            left: AppSizes
-                                                .appHorizontalSm *
-                                                1.1),
-                                        child: Row(
-                                          crossAxisAlignment:
-                                          CrossAxisAlignment
-                                              .center,
-                                          children: [
-                                            Image.asset(
-                                              Images.credit_card,
-                                              height: 12,
-                                              width: 12,
-                                            ),
-                                            SizedBox(
-                                              width: AppSizes
-                                                  .appHorizontalSm *
-                                                  0.8,
-                                            ),
-                                            Expanded(
-                                                child: Text(
-                                                  "${MyRepo.userDataModel.value.data!.cards![index - 1].cardNumber}",
-                                                  textAlign:
-                                                  TextAlign.start,
-                                                  style: poppinsRegular
-                                                      .copyWith(
-                                                      fontSize: 11),
-                                                )),
-                                          ],
-                                        ),
-                                      )
-                                    ],
+                                      errorWidget: (context, url, error) =>
+                                      const Icon(Icons.error),
+                                    ):Container(),
                                   ),
+                                  SizedBox(height: AppSizes.appVerticalSm*.5,),
+                                  RichText(text:TextSpan(
+                                    text: "${MyRepo.googleDataModel.value.data![index].displayLink}",
+                                    style: const TextStyle(decoration: TextDecoration.underline, color: Colors.blue),
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () async {
+                                        final url = Uri.parse("${MyRepo.googleDataModel.value.data![index].link}");
+                                        if (await canLaunchUrl(url)) {
+                                          await launchUrl(url);
+                                        } else {
+                                          throw "Could not launch $url";
+                                        }
+                                      },
+                                  ), ),
+                                  SizedBox(height: AppSizes.appVerticalSm*.5,),
+                                  Padding(
+                                    padding:  EdgeInsets.symmetric(horizontal: AppSizes.appHorizontalSm*1.3),
+                                    child: Text("${MyRepo.googleDataModel.value.data![index].title}",textAlign: TextAlign.start,style: const TextStyle(color: AppColors.kBlack,fontSize: 18,fontWeight: FontWeight.w600)),
+                                  )
                                 ],
                               ))),
                     );

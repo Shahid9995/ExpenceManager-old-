@@ -130,8 +130,8 @@ class _CameraViewState extends State<CameraView> {
       ):
       InkWell(
       onTap: () async {
-        print("===at camera view:${MyRepo.tittle.value}===========");
-        if(MyRepo.tittle.value!=""){
+        print("===at camera view:${MyRepo.tittle.value.length}===========");
+        if(MyRepo.tittle.value.length>12){
          // await _stopLiveFeed();
          //  await _controller?.stopImageStream();
           await _stopLiveFeed();

@@ -115,9 +115,7 @@ class _ScanCardsState extends State<ScanCards> {
                                               children: [
                                                 Container(
                                                   padding: EdgeInsets.symmetric(
-                                                    vertical: AppSizes
-                                                            .appHorizontalSm *
-                                                        0.6,
+                                                    vertical: AppSizes.appHorizontalSm * 0.6,
                                                   ),
                                                   child: CachedNetworkImage(
                                                     // imageUrl: "",
@@ -125,16 +123,10 @@ class _ScanCardsState extends State<ScanCards> {
                                                         "${MyRepo.userDataModel.value.data!.cards![index - 1].cardImage}",
                                                     imageBuilder: (context,
                                                             imageProvider) =>
-                                                        Container(
-                                                      width: 150,
+                                                        Container(width: 150,
                                                       height: 90,
-                                                      decoration: BoxDecoration(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(10),
-                                                        image: DecorationImage(
-                                                            image:
-                                                                imageProvider,
+                                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
+                                                        image: DecorationImage(image: imageProvider,
                                                             fit: BoxFit.cover),
                                                       ),
                                                     ),
@@ -226,9 +218,7 @@ class _ScanCardsState extends State<ScanCards> {
                                                       .withOpacity(0.5),
                                                   borderRadius:
                                                       const BorderRadius.only(
-                                                          bottomLeft:
-                                                              Radius.circular(
-                                                                  15),
+                                                          bottomLeft: Radius.circular(15),
                                                           bottomRight:
                                                               Radius.circular(
                                                                   15))),
