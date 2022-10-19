@@ -131,15 +131,15 @@ class _CameraViewState extends State<CameraView> {
       InkWell(
       onTap: () async {
         print("===at camera view:${MyRepo.tittle.value.length}===========");
-        if(MyRepo.tittle.value.length>12){
+        if(MyRepo.tittle.value!=""){
          // await _stopLiveFeed();
          //  await _controller?.stopImageStream();
-          await _stopLiveFeed();
+           _stopLiveFeed();
           // await _controller?.dispose();
           await userDataController.googleSearch(MyRepo.tittle.value).then((status) async {
             print("=login body=status:${status.isSuccess}==");
             if (status.isSuccess) {
-              Get.off(const PriceList());
+              Get.off(()=> const PriceList());
             }else{
               showCustomSnackBar(status.message);
               _startLiveFeed();
@@ -294,20 +294,20 @@ class _CameraViewState extends State<CameraView> {
     setState(() {});
   }
 
-  void _switchScreenMode() {
-    _image = null;
-    if (_mode == ScreenMode.liveFeed) {
-      _mode = ScreenMode.gallery;
-      _stopLiveFeed();
-    } else {
-      _mode = ScreenMode.liveFeed;
-      _startLiveFeed();
-    }
-    if (widget.onScreenModeChanged != null) {
-      widget.onScreenModeChanged!(_mode);
-    }
-    setState(() {});
-  }
+  // void _switchScreenMode() {
+  //   _image = null;
+  //   if (_mode == ScreenMode.liveFeed) {
+  //     _mode = ScreenMode.gallery;
+  //     _stopLiveFeed();
+  //   } else {
+  //     _mode = ScreenMode.liveFeed;
+  //     _startLiveFeed();
+  //   }
+  //   if (widget.onScreenModeChanged != null) {
+  //     widget.onScreenModeChanged!(_mode);
+  //   }
+  //   setState(() {});
+  // }
 
   Future _startLiveFeed() async {
     final camera = cameras[_cameraIndex];

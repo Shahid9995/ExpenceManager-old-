@@ -28,6 +28,12 @@ class _PriceListState extends State<PriceList> {
     super.initState();
   }
   @override
+  void dispose(){
+    MyRepo.googleDataModel.value.data!.clear();
+    MyRepo.tittle.value='';
+    super.dispose();
+  }
+  @override
   Widget build(BuildContext context) {
     return AppScafflod(
       // isTransaction: true,

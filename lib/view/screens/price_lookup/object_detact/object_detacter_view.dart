@@ -37,7 +37,8 @@ class _ObjectDetectorView extends State<ObjectDetectorView> {
 
   @override
   void dispose() {
-    _canProcess = false;
+    print("==close:==========");
+    // _canProcess = false;
     _objectDetector.close();
     super.dispose();
   }
@@ -136,7 +137,8 @@ class _ObjectDetectorView extends State<ObjectDetectorView> {
       // }
 
       print("====_text:$text====");
-      MyRepo.tittle.value=text+""+"product"+"price";
+      MyRepo.tittle.value=text;
+      // MyRepo.tittle.value=text+""+"product"+"price";
     } else {
       print("=========shahid:==================");
       String text = 'Objects found: ${objects.length}\n\n';
