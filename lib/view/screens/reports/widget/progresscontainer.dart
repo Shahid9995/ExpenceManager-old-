@@ -30,29 +30,23 @@ class ProgressBar extends StatelessWidget {
     return LayoutBuilder(
         builder: (_, boxConstraints) {
       var x = boxConstraints.maxWidth;
-      int i=5;
       var xx=0.0;
-      if((max-current)<=10){
-        i=0;
-      }
-      // (max==0)?max=1:
       RxBool isOverFlow=false.obs;
       // var x = boxConstraints.maxWidth;
       var percent = ((current) / max) * x;
-      var percnt = (current / max) * 100;
-      if(percnt<=15){
-        percent=AppSizes.appHorizontalXXL*1.1;
+      var percnt = (current / max)*100;
+      if(percnt<=10){
+        // var nm=max-current;
+      print("if=percent:$percent==percnt($text):$percnt=====");
+        // if(percent<80){
+        // print("=nm:$nm==percnt($text):$percnt=====");
+        percent=percent+90;
+        // percent=+percent
         xx=x;
       }else if(percnt>=60){
+        print("===percnt($text):$percnt=====");
         isOverFlow.value=true;
       }
-
-
-      // if(percent>170) {
-      //
-      // }
-      print("percent=$percent");
-
       return Row(
         children: [
           Stack(
@@ -121,7 +115,7 @@ class ProgressBar extends StatelessWidget {
                           children: [
                             // const Icon(FontAwesomeIcons.angleDown,color: AppColors.kWhite,),
                             SizedBox(
-                              width: AppSizes.appVerticalSm*4.5,
+                              width: percent,
                             ),
                            // const Text("",style:  TextStyle(color: AppColors.kBlack),)
                           ],
