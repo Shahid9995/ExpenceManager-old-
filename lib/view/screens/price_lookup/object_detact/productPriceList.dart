@@ -117,7 +117,7 @@ class _PriceListState extends State<PriceList> {
                                   SizedBox(height: AppSizes.appVerticalSm*.5,),
                                   Padding(
                                     padding:  EdgeInsets.symmetric(horizontal: AppSizes.appHorizontalSm*1.3),
-                                    child: Text("${MyRepo.googleDataModel.value.data![index].title}",textAlign: TextAlign.start,style: const TextStyle(color: AppColors.kBlack,fontSize: 18,fontWeight: FontWeight.w600)),
+                                    child: Text("${MyRepo.googleDataModel.value.data![index].title}",textAlign: TextAlign.start,style: const TextStyle(color: AppColors.kBlack,fontSize: 15,fontWeight: FontWeight.w500)),
                                   )
                                 ],
                               ))),

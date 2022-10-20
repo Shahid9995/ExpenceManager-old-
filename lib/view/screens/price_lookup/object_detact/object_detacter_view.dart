@@ -38,7 +38,7 @@ class _ObjectDetectorView extends State<ObjectDetectorView> {
   @override
   void dispose() {
     print("==close:==========");
-    // _canProcess = false;
+    _canProcess = false;
     _objectDetector.close();
     super.dispose();
   }
