@@ -6,8 +6,6 @@ import 'package:expensemanage_app/util/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'dimensions.dart';
-
 class CircularButton extends StatefulWidget {
   final String text;
   const CircularButton({Key? key,required this.text}) : super(key: key);

@@ -8,8 +8,6 @@ import '../../../../core/repository/MyRepo.dart';
 import '../../../../core/viewModel/Scaffold/AppScafflod.dart';
 import '../../../../util/app_color.dart';
 import '../../../../util/app_size.dart';
-import '../../../../util/images.dart';
-import '../../../../util/styles.dart';
 
 class PriceList extends StatefulWidget {
   const PriceList({Key? key}) : super(key: key);

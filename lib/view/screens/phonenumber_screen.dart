@@ -1,4 +1,3 @@
-import 'package:expensemanage_app/util/app_color.dart';
 import 'package:expensemanage_app/util/app_size.dart';
 import 'package:expensemanage_app/util/dimensions.dart';
 import 'package:expensemanage_app/util/styles.dart';

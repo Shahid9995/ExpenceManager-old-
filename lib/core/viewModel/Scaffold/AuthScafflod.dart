@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../util/app_size.dart';
-import '../../../util/dimensions.dart';
 import '../../../util/images.dart';
 import '../../../util/styles.dart';
 

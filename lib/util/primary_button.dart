@@ -3,8 +3,6 @@ import 'package:expensemanage_app/util/app_size.dart';
 import 'package:expensemanage_app/util/styles.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'dimensions.dart';
-
 class PrimaryButton extends StatefulWidget {
 
   final String text;

@@ -13,7 +13,6 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import '../../../util/styles.dart';
-
 import '../changepassword/changepasswor_screen.dart';
 
 class MyProfileScreen extends StatefulWidget {

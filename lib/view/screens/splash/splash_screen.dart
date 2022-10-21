@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:connectivity/connectivity.dart';
-import 'package:expensemanage_app/view/screens/splash/splash_screen2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

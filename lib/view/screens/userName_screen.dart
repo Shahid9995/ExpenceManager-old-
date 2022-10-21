@@ -1,25 +1,20 @@
 
 
-import 'package:expensemanage_app/util/app_color.dart';
 import 'package:expensemanage_app/util/app_constants.dart';
 import 'package:expensemanage_app/util/app_size.dart';
 import 'package:expensemanage_app/util/styles.dart';
 import 'package:expensemanage_app/view/base/custom_text_field.dart';
-import 'package:expensemanage_app/view/screens/dashboard/dashboard_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get/get_utils/get_utils.dart';
 import 'package:get_storage/get_storage.dart';
 
 import '../../core/api/api_client.dart';
 import '../../core/repository/AuthRepo.dart';
-import '../../core/repository/MyRepo.dart';
 import '../../core/viewModel/Scaffold/AppScafflod.dart';
 import '../../core/viewModel/controller/authcontroller/auth_controller.dart';
 import '../../helper/route_helper.dart';
-import '../../util/dimensions.dart';
 import '../../util/images.dart';
 import '../../util/primary_button.dart';
 import '../base/custom_snackbar.dart';

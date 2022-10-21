@@ -7,7 +7,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../core/viewModel/DataModel/user_data_model.dart';
-import '../../../util/dimensions.dart';
 import '../../../util/images.dart';
 import '../Reports/widget/progresscontainer.dart';
 
