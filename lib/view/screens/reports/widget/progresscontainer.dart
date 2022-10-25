@@ -35,7 +35,7 @@ class ProgressBar extends StatelessWidget {
       // var x = boxConstraints.maxWidth;
       var percent = ((current) / max) * x;
       var percnt = (current / max)*100;
-      if(percnt<=10){
+      if(percnt<=10||percnt<=20||percnt<=50){
         // var nm=max-current;
       print("if=percent:$percent==percnt($text):$percnt=====");
         // if(percent<80){
@@ -98,7 +98,7 @@ class ProgressBar extends StatelessWidget {
               ),
               (!isOverFlow.value)? AnimatedContainer(
 
-                width: xx,
+                width: x,
                 height: 40,
                 decoration: BoxDecoration(
                   color: AppColors.kTransparent,
@@ -136,7 +136,6 @@ class ProgressBar extends StatelessWidget {
               ):Container(),
             ],
           ),
-          // Text("ksfdng")
         ],
       );
         },

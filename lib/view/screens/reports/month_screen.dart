@@ -22,6 +22,11 @@ class MonthScreen extends StatefulWidget {
 
 class _MonthScreenState extends State<MonthScreen> {
   @override
+  void initState(){
+    // print("====price==${MyRepo.userDataModel.value.data!.reports!.month![0].transactionAmount}===========");
+ super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
     AppSizes().init(context);
     return AppScafflod(heading: widget.heading, body: Expanded(
@@ -75,7 +80,7 @@ class _MonthScreenState extends State<MonthScreen> {
                   horizontal: AppSizes.appHorizontalSm
               ),
               child: ListView.builder(
-                itemCount: MyRepo.userDataModel.value.data!.reports!.today!.length,
+                itemCount: MyRepo.userDataModel.value.data!.reports!.month!.length,
                   itemBuilder: (context,index){
                 return Column(
                   children: [
@@ -84,7 +89,7 @@ class _MonthScreenState extends State<MonthScreen> {
                       child: ProgressBar(
                         text: "${widget.dataModel![index].transactionType}",
                         current: MyRepo.userDataModel.value.data!.reports!.month![index].transactionAmount.toDouble(),
-                        max:(MyRepo.userDataModel.value.data!.monthSpent.toDouble()==0)?1:MyRepo.userDataModel.value.data!.monthSpent.toDouble()+10,),
+                        max:(MyRepo.userDataModel.value.data!.monthSpent.toDouble()==0)?1:MyRepo.userDataModel.value.data!.monthSpent.toDouble(),),
                     ),
                     // SizedBox(
                     //            height: AppSizes.appHorizontalMd,

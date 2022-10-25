@@ -231,7 +231,7 @@ class _AddNewCardsState extends State<AddNewCards> {
                                             height: Dimensions.FONT_SIZE_DEFAULT+1,
                                           ),
                                           TextButton(onPressed: (){
-                                            Get.off(ScanCards());
+                                            Get.off(const ScanCards());
                                           },
                                               child: Text("View All Scanned Card",style: poppinsMedium.copyWith(fontSize: 14,color: AppColors.kBlack),))
                                         ],
