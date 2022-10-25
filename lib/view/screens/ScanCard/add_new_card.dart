@@ -62,7 +62,7 @@ class _AddNewCardsState extends State<AddNewCards> {
   Widget build(BuildContext context) {
     return Obx((){
       return Scaffold(
-        resizeToAvoidBottomInset: false,
+        // resizeToAvoidBottomInset: false,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -155,7 +155,7 @@ class _AddNewCardsState extends State<AddNewCards> {
                                         ),
                                       ],
                                     ),
-                                    (_image != null)? 
+                                    (_image != null)?
                                     Expanded(
                                       child: SingleChildScrollView(
                                         child: SizedBox(
@@ -239,12 +239,14 @@ class _AddNewCardsState extends State<AddNewCards> {
                                     )
 
                                   ],
-                                ):Column(
+                                ):
+                                Column(
                                   mainAxisAlignment:
                                   MainAxisAlignment.spaceBetween,
                                   children: [
                                     Expanded(
                                       child: SingleChildScrollView(
+                                        scrollDirection: Axis.vertical,
                                         child: Container(
                                           alignment: Alignment.centerLeft,
                                           padding: EdgeInsets.symmetric(horizontal: AppSizes.appHorizontalMd*1.5,vertical: AppSizes.appHorizontalSm ),
@@ -377,8 +379,7 @@ class _AddNewCardsState extends State<AddNewCards> {
                                             _saveCard(userDataController);
                                             },
                                           child: const PrimaryButton(
-                                            text:
-                                                "Confirm",
+                                            text: "Confirm",
                                           )),
                                     )
                                         :  Center(
