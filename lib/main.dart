@@ -8,6 +8,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:month_year_picker/month_year_picker.dart';
 
 import 'helper/route_helper.dart';
+//latest working
 // final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 List<CameraDescription> cameras = [];
 void main() async{
